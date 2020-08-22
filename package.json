@@ -1,6 +1,6 @@
 {
     "name": "@pengubot/eslint-config",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "PenguBot's ESLint and TypeScript Configuration",
     "main": "dist/index.js",
     "repository": "https://github.com/PenguBot/eslint-config.git",
