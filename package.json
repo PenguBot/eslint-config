@@ -10,13 +10,15 @@
     "scripts": {
         "clean": "tsc -b src --clean",
         "build": "tsc -b src",
-        "test": "eslint --ext ts src"
+        "test": "eslint --ext ts src",
+        "sversion": "yarn standard-version"
     },
     "peerDependencies": {
         "@quantumly/eslint-config": "^1.1.0",
         "@typescript-eslint/eslint-plugin": "^3.7.0",
         "@typescript-eslint/parser": "^3.7.0",
         "eslint": "^7.5.0",
+        "eslint-plugin-tsdoc": "^0.2.6",
         "typescript": "^3.9.7"
     },
     "devDependencies": {
@@ -30,6 +32,7 @@
         "eslint": "^7.7.0",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-tsdoc": "^0.2.6",
         "husky": "^4.2.5",
         "lint-staged": "^10.2.11",
         "standard-version": "^9.0.0",

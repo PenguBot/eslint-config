@@ -1,6 +1,9 @@
 export const config = {
 	parser: "@typescript-eslint/parser",
-	extends: "plugin:@typescript-eslint/recommended",
+	extends: [
+		"@quantumly",
+		"plugin:@typescript-eslint/recommended"
+	],
 	env: {
 		es6: true,
 		es2017: true,
@@ -12,31 +15,12 @@ export const config = {
 		sourceType: "module",
 		project: "./tsconfig.eslint.json"
 	},
-	plugins: ["@typescript-eslint"],
+	plugins: [
+		"@typescript-eslint",
+		"tsdoc"
+	],
 	rules: {
 		indent: "off",
-		"valid-jsdoc": [
-			"warn",
-			{
-				requireReturn: false,
-				requireReturnDescription: false,
-				preferType: {
-					// eslint-disable-next-line @typescript-eslint/naming-convention
-					String: "string",
-					// eslint-disable-next-line @typescript-eslint/naming-convention
-					Number: "number",
-					// eslint-disable-next-line @typescript-eslint/naming-convention
-					Boolean: "boolean",
-					// eslint-disable-next-line @typescript-eslint/naming-convention
-					Symbol: "symbol",
-					function: "Function",
-					object: "Object",
-					// eslint-disable-next-line @typescript-eslint/naming-convention
-					Date: "date",
-					error: "Error"
-				}
-			}
-		],
 		"no-extra-parens": "off",
 		"accessor-pairs": "warn",
 		"array-callback-return": "error",
@@ -92,7 +76,7 @@ export const config = {
 		"no-mixed-requires": "error",
 		"no-new-require": "error",
 		"no-path-concat": "error",
-		"no-process-env": "error",
+		"no-process-env": "off",
 		"array-bracket-spacing": "error",
 		"block-spacing": "error",
 		"brace-style": [
@@ -165,7 +149,7 @@ export const config = {
 			}
 		],
 		"no-array-constructor": "error",
-		"no-bitwise": "warn",
+		"no-bitwise": "off",
 		"no-inline-comments": "error",
 		"no-lonely-if": "error",
 		"no-mixed-operators": "error",
@@ -607,7 +591,9 @@ export const config = {
 				"ts-check": true,
 				minimumDescriptionLength: 3
 			}
-		]
+		],
+
+		"tsdoc/syntax": "warn"
 	}
 };
 
